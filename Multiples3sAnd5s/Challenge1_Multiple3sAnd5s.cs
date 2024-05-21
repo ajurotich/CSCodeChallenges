@@ -8,7 +8,7 @@ internal class Challenge1_Multiple3sAnd5s {
 		Console.Title = "Multiple3sAnd5s";
 		Console.WriteLine("Multiple3sAnd5s");
 		Console.WriteLine("This program will take in a positive number and output the sum of the multiples of 3 and 5.");
-		Console.WriteLine("----------------------------------------------------------------------------------\n");
+		Console.WriteLine("-------------------------------------------------------------------------------------------\n");
 
 		//=== VARIABLES===\\
 		string sInput;
@@ -28,10 +28,9 @@ internal class Challenge1_Multiple3sAnd5s {
 			return;
 		}
 
-		for(int i = 0; i < iInput; i++) {
-			if(i%3 == 0)		sum += i;
-			else if(i%5 == 0)	sum += i;
-		}
+		for(int i = 0; i < iInput; i++) 
+			if(i%3 == 0 || i%5 == 0) sum += i;
+		
 
 		//=== OUTPUT ===\\
 		Console.WriteLine($"The total sum: {sum}");
