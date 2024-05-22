@@ -1,6 +1,6 @@
 ﻿namespace Multiples3sAnd5s;
 
-internal class Challenge1_Multiple3sAnd5s {
+internal class Multiple3sAnd5s {
 	static void Main(string[] args) {
 
 		//=== TITLE/HEADER ===\\
