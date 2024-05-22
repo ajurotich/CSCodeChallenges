@@ -42,15 +42,13 @@ internal class LongestCollatz {
 
 		for (int i = 1; i < iInput; i++) {
 			int l = CollatzChainLength(i);
-            if (l > length) {
-				length = l;
-				num = i;
-			}
+				
+			if (l > length) (length, num) = (l, i);
 		}
 
 		//=== OUTPUT ===\\
 		Console.WriteLine($"The number: {num}");
-		Console.WriteLine($"The length: {length}");
+		Console.WriteLine($"The chain length: {length}");
 		General.Footer();
 
 	}
@@ -59,7 +57,7 @@ internal class LongestCollatz {
 		int length = 1;
 
 		while(n > 1) {
-			n = (n%2 == 0) ? n/2 : 3*n+1;
+			n = (n%2 == 0) ? n/2 : n*3+1;
 			length++;
 		}
 
